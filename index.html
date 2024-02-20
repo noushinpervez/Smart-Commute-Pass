@@ -267,8 +267,12 @@
                     <div class="grid flex-1">
                         <div class="flex flex-col">
                             <div class="flex flex-col items-start divide-y divide-dashed divide-p/20">
-                                <div>
-                                    <h3 class="text-base_black text-2xl font-semibold mb-6">Select Your Seat</h3>
+                                <div class="flex justify-between w-full mb-6">
+                                    <div>
+                                        <h3 class="text-base_black text-2xl font-semibold">Select Your Seat</h3>
+                                    </div>
+                                    <div id="seat-selection-message" class="text-red-700 font-semibold text-base inter">
+                                    </div>
                                 </div>
 
                                 <div class="flex justify-between w-full p-3">
@@ -398,102 +402,107 @@
                     <div class="grid flex-1 pl-8 inter">
                         <div class="flex flex-col items-start divide-y divide-dashed divide-p/20">
                             <div>
-                                <h3 class="text-base_black text-2xl font-semibold mb-6 raleway">Select Your Seat</h3>
+                                <h3 class="text-base_black text-2xl font-semibold raleway mb-6">Select Your Seat</h3>
                             </div>
-                        </div>
 
-                        <!-- necessary input fill -->
-                        <div class="form-control w-full flex flex-col gap-12 bg-base_white">
+                            <!-- necessary input fill -->
+                            <div class="form-control w-full flex flex-col gap-12 bg-base_white">
 
-                            <div class="card bg-bg_white">
-                                <div class="card-body">
+                                <div class="card bg-bg_white mt-6">
+                                    <div class="card-body">
 
-                                    <div class="flex justify-between w-full text-base_black text-base font-medium">
-                                        <div class="flex gap-1">
-                                            <div>Seat</div>
+                                        <div class="flex justify-between w-full text-base_black text-base font-medium">
+                                            <div class="flex gap-1">
+                                                <div>Seat</div>
+                                                <div>
+                                                    <button
+                                                        class="text-white bg-accent text-xs rounded-md font-bold h-fit px-1"
+                                                        id="seat-taken">0</button>
+                                                </div>
+                                            </div>
+                                            <div>Class</div>
+                                            <div>Price</div>
+                                        </div>
+
+                                        <div class="border border-dashed border-p/20 my-4"></div>
+
+                                        <div class="flex flex-col text-p/60 text-base gap-4" id="show-info"></div>
+
+                                        <div class="border border-p/20 my-4"></div>
+
+                                        <div class="text-base_black text-base font-medium flex justify-between mb-4">
                                             <div>
-                                                <button
-                                                    class="text-white bg-accent text-xs rounded-md font-bold h-fit px-1"
-                                                    id="seat-taken">0</button>
+                                                <p>Total Price</p>
+                                            </div>
+                                            <div>
+                                                <p>BDT <span id="total-price">0</span></p>
                                             </div>
                                         </div>
-                                        <div>Class</div>
-                                        <div>Price</div>
-                                    </div>
 
-                                    <div class="border border-dashed border-p/20 my-4"></div>
-
-                                    <div class="flex flex-col text-p/60 text-base gap-4" id="show-info"></div>
-
-                                    <div class="border border-p/20 my-4"></div>
-
-                                    <div class="text-base_black text-base font-medium flex justify-between mb-4">
-                                        <div>
-                                            <p>Total Price</p>
+                                        <div class="flex relative mb-6">
+                                            <input type="text" id="coupon-code" placeholder="Have any coupon?"
+                                                class="input input-bordered w-full text-p/40 min-h-full focus:outline-accent/50" />
+                                            <button
+                                                class="btn bg-accent text-white text-base font-semibold px-5 py-3 absolute right-0 top-1/2 transform -translate-y-1/2 hover:bg-accent/50"
+                                                id="coupon-apply">Apply</button>
                                         </div>
-                                        <div>
-                                            <p>BDT <span id="total-price">0</span></p>
-                                        </div>
-                                    </div>
 
-                                    <div class="flex relative mb-6">
-                                        <input id="coupon-input" type="text" placeholder="Have any coupon?"
-                                            class="input input-bordered w-full text-p/40 min-h-full focus:outline-accent/50" />
-                                        <button
-                                            class="btn bg-accent text-white text-base font-semibold px-5 py-3 absolute right-0 top-1/2 transform -translate-y-1/2 hover:bg-accent/50"
-                                            id="coupon-apply">Apply</button>
-                                    </div>
-
-                                    <div class="text-base_black text-base font-medium flex justify-between">
-                                        <div>
-                                            <p>Grand Total</p>
+                                        <div id="discount-message"
+                                            class="flex justify-between w-full -mt-4 mb-6 text-accent text-base font-medium">
                                         </div>
-                                        <div>
-                                            <p>BDT <span id="grand-total-price">0</span></p>
+
+                                        <div class="text-base_black text-base font-medium flex justify-between">
+                                            <div>
+                                                <p>Grand Total</p>
+                                            </div>
+                                            <div>
+                                                <p>BDT <span id="grand-total-price">0</span></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div>
-                                <div class="label">
-                                    <span class="label-text text-base_black font-semibold text-base">Passenger
-                                        Name*</span>
+                                <div>
+                                    <div class="label">
+                                        <span class="label-text text-base_black font-semibold text-base">Passenger
+                                            Name*</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your name"
+                                        class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
                                 </div>
-                                <input type="text" placeholder="Enter your name"
-                                    class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
-                            </div>
 
-                            <div>
-                                <div class="label">
-                                    <span class="label-text text-base_black font-semibold text-base">Phone
-                                        Number*</span>
+                                <div>
+                                    <div class="label">
+                                        <span class="label-text text-base_black font-semibold text-base">Phone
+                                            Number*</span>
+                                    </div>
+                                    <input type="text" id="phone" placeholder="Enter your phone number"
+                                        class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
                                 </div>
-                                <input type="text" id="phone" placeholder="Enter your phone number"
-                                    class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
-                            </div>
 
-                            <div>
-                                <div class="label">
-                                    <span class="label-text text-base_black font-semibold text-base">Email ID*</span>
+                                <div>
+                                    <div class="label">
+                                        <span class="label-text text-base_black font-semibold text-base">Email
+                                            ID*</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your email id"
+                                        class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
                                 </div>
-                                <input type="text" placeholder="Enter your email id"
-                                    class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
-                            </div>
 
-                            <div>
-                                <button
-                                    class="btn text-white text-xl font-extrabold bg-accent w-full h-full hover:bg-accent/50 py-4 mt-6" id="next-btn">Next</button>
-                            </div>
+                                <div>
+                                    <button
+                                        class="btn text-white text-xl font-extrabold bg-accent w-full h-full hover:bg-accent/50 py-4 mt-6 rounded-2xl"
+                                        id="next-btn">Next</button>
+                                </div>
 
-                            <div class="flex gap-11 justify-center">
-                                <a href="" class="underline text-p/60 text-base">Terms and Conditions</a>
-                                <a href="" class="underline text-p/60 text-base">Cancellation Policy</a>
+                                <div class="flex gap-11 justify-center">
+                                    <a href="" class="underline text-p/60 text-base">Terms and Conditions</a>
+                                    <a href="" class="underline text-p/60 text-base">Cancellation Policy</a>
+                                </div>
+                                </label>
                             </div>
-                            </label>
                         </div>
                     </div>
-                </div>
         </section>
     </main>
 
