@@ -13,18 +13,18 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- raleway and inter font -->
+    <!-- roboto, raleway and inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
     <style>
+        .roboto {
+            font-family: "Roboto", sans-serif;
+        }
+
         .raleway {
             font-family: "Raleway", sans-serif;
         }
@@ -48,6 +48,8 @@
                         coupon1: '#FFBF0F',
                         coupon2: '#F78C9C',
                         bg_white: '#F7F8F8',
+                        modal_text: '#4A4A4A',
+                        success: '#27AE60',
                     }
                 }
             }
@@ -57,7 +59,7 @@
 
 <body class="text-center">
     <!-- navbar section -->
-    <nav class="raleway mt-14 container mx-auto w-4/5">
+    <nav class="raleway mt-14 mx-auto w-4/5">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -96,7 +98,7 @@
     </nav>
 
     <!-- banner section -->
-    <header class="container mx-auto w-4/5 relative">
+    <header class="mx-auto w-4/5 relative">
         <div class="hero rounded-3xl relative mt-9 pt-20 pb-32" style="background-image: url(./images/banner.png);">
             <div class="hero-content text-center">
                 <div class="max-w-[60%]">
@@ -117,29 +119,31 @@
             class="inter absolute -bottom-[10%] left-1/2 transform -translate-x-1/2 px-24 stats gap-6 bg-opacity-0 text-left w-full">
 
             <!-- stat 1: registered users -->
-            <div class="stat bg-white rounded-3xl p-8 flex gap-4">
-                <div><img src="./images/people.png" alt="People icon"></div>
-                <div class="flex flex-col gap-2">
-                    <h3 class="stat-value text-base_black text-4xl font-bold">500K+</h3>
-                    <p class="stat-desc text-p/60 text-lg">Registered users</p>
+            <div class="stat flex">
+                <div class="stat bg-white rounded-3xl p-8 flex border-b-4 border-accent">
+                    <div><img src="./images/people.png" alt="People icon"></div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="stat-value text-base_black text-4xl font-bold">500K+</h3>
+                        <p class="stat-desc text-p/60 text-lg">Registered users</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- stat 2: tickets sold -->
-            <div class="stat bg-white rounded-3xl flex p-8">
-                <div><img src="./images/ticket-cupon.png" alt="Ticket coupon icon"></div>
-                <div class="flex flex-col gap-2">
-                    <h3 class="stat-value text-base_black text-4xl font-bold">1.7 Lakhs</h3>
-                    <p class="stat-desc text-p/60 text-lg">Tickets sold</p>
+    
+                <!-- stat 2: tickets sold -->
+                <div class="stat bg-white rounded-3xl flex p-8 border-b-4 border-accent">
+                    <div><img src="./images/ticket-cupon.png" alt="Ticket coupon icon"></div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="stat-value text-base_black text-4xl font-bold">1.7 Lakhs</h3>
+                        <p class="stat-desc text-p/60 text-lg">Tickets sold</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- stat 3: rental partners -->
-            <div class="stat bg-white rounded-3xl flex p-8">
-                <div><img src="./images/stoppage.png" alt="Stoppage icon"></div>
-                <div class="flex flex-col gap-2">
-                    <h3 class="stat-value text-base_black text-4xl font-bold">80K+</h3>
-                    <p class="stat-desc text-p/60 text-lg">Rental partners</p>
+    
+                <!-- stat 3: rental partners -->
+                <div class="stat bg-white rounded-3xl flex p-8 border-b-4 border-accent">
+                    <div><img src="./images/stoppage.png" alt="Stoppage icon"></div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="stat-value text-base_black text-4xl font-bold">80K+</h3>
+                        <p class="stat-desc text-p/60 text-lg">Rental partners</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -148,7 +152,7 @@
     <!-- main section -->
     <main>
         <!-- coupon section -->
-        <section class="mt-48 container mx-auto w-4/5">
+        <section class="mt-48 mx-auto w-4/5">
             <h3 class="text-base_black text-4xl font-bold raleway">Best offers for you</h3>
 
             <div class="flex flex-col w-full lg:flex-row gap-6 mt-12">
@@ -198,7 +202,7 @@
                 your preferred seats and enjoy a comfortable journey. Use exclusive coupons for extra savings!</p>
 
             <!-- ticket info card -->
-            <div class="flex rounded-3xl mt-12 bg-white items-center container mx-auto w-4/5">
+            <div class="flex rounded-3xl mt-12 bg-white items-center mx-auto w-4/5">
                 <div class="grid gap-6 flex-grow text-left inter mx-8 my-6" style="flex: 5;">
                     <!-- ticket info headline -->
                     <div class="flex justify-between">
@@ -261,18 +265,20 @@
             </div>
 
             <!-- buy tickets -->
-            <div class="mt-6 raleway rounded-3xl bg-white container mx-auto w-4/5">
+            <div class="mt-6 raleway rounded-3xl bg-white mx-auto w-4/5">
                 <div class="flex flex-col gap-16 w-full lg:flex-row divide-x-2 divide-dashed divide-p/30 p-8">
                     <!-- seat selection -->
                     <div class="grid flex-1">
                         <div class="flex flex-col">
                             <div class="flex flex-col items-start divide-y divide-dashed divide-p/20">
+
                                 <div class="flex justify-between w-full mb-6">
                                     <div>
                                         <h3 class="text-base_black text-2xl font-semibold">Select Your Seat</h3>
                                     </div>
-                                    <div id="seat-selection-message" class="text-red-700 font-semibold text-base inter">
-                                    </div>
+
+                                    <!-- show error message: You can only select up to 4 seats. -->
+                                    <div id="seat-selection-message" class="text-red-700 font-semibold text-base inter"></div>
                                 </div>
 
                                 <div class="flex justify-between w-full p-3">
@@ -398,19 +404,16 @@
                         </div>
                     </div>
 
-                    <!-- show price and info fill up -->
+                    <!-- show info and input form -->
                     <div class="grid flex-1 pl-8 inter">
                         <div class="flex flex-col items-start divide-y divide-dashed divide-p/20">
                             <div>
                                 <h3 class="text-base_black text-2xl font-semibold raleway mb-6">Select Your Seat</h3>
                             </div>
 
-                            <!-- necessary input fill -->
-                            <div class="form-control w-full flex flex-col gap-12 bg-base_white">
-
-                                <div class="card bg-bg_white mt-6">
-                                    <div class="card-body">
-
+                            <div class="w-full flex flex-col gap-3 bg-base_white">
+                                <div class="card bg-bg_white mt-4">
+                                    <div class="card-body p-6">
                                         <div class="flex justify-between w-full text-base_black text-base font-medium">
                                             <div class="flex gap-1">
                                                 <div>Seat</div>
@@ -424,13 +427,15 @@
                                             <div>Price</div>
                                         </div>
 
-                                        <div class="border border-dashed border-p/20 my-4"></div>
+                                        <div class="border border-dashed border-p/20 my-3"></div>
+                                        
+                                        <!-- show seat selection info -->
+                                        <div class="flex flex-col text-p/60 text-base gap-3" id="show-info"></div>
 
-                                        <div class="flex flex-col text-p/60 text-base gap-4" id="show-info"></div>
+                                        <div class="border border-p/20 my-3"></div>
 
-                                        <div class="border border-p/20 my-4"></div>
-
-                                        <div class="text-base_black text-base font-medium flex justify-between mb-4">
+                                        <!-- show total price -->
+                                        <div class="text-base_black text-base font-medium flex justify-between mb-3">
                                             <div>
                                                 <p>Total Price</p>
                                             </div>
@@ -439,7 +444,8 @@
                                             </div>
                                         </div>
 
-                                        <div class="flex relative mb-6">
+                                        <!-- apply for coupon -->
+                                        <div class="flex relative mb-3">
                                             <input type="text" id="coupon-code" placeholder="Have any coupon?"
                                                 class="input input-bordered w-full text-p/40 min-h-full focus:outline-accent/50" />
                                             <button
@@ -447,10 +453,10 @@
                                                 id="coupon-apply">Apply</button>
                                         </div>
 
-                                        <div id="discount-message"
-                                            class="flex justify-between w-full -mt-4 mb-6 text-accent text-base font-medium">
-                                        </div>
+                                        <!-- show discount info if correct coupon code is applied -->
+                                        <div id="discount-message" class="flex justify-between w-full -mt-3 mb-3 text-accent text-base font-medium"></div>
 
+                                        <!-- show grand total price -->
                                         <div class="text-base_black text-base font-medium flex justify-between">
                                             <div>
                                                 <p>Grand Total</p>
@@ -462,44 +468,70 @@
                                     </div>
                                 </div>
 
+                                <!-- necessary input fill -->
                                 <div>
+                                    <!-- name -->
                                     <div class="label">
                                         <span class="label-text text-base_black font-semibold text-base">Passenger
                                             Name*</span>
                                     </div>
                                     <input type="text" placeholder="Enter your name"
-                                        class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
+                                        class="input input-bordered w-full text-p/40 focus:outline-accent/50" />
                                 </div>
 
                                 <div>
+                                    <!-- phone number -->
                                     <div class="label">
                                         <span class="label-text text-base_black font-semibold text-base">Phone
                                             Number*</span>
                                     </div>
                                     <input type="text" id="phone" placeholder="Enter your phone number"
-                                        class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
+                                        class="input input-bordered w-full text-p/40 focus:outline-accent/50" />
                                 </div>
 
                                 <div>
+                                    <!-- email address -->
                                     <div class="label">
                                         <span class="label-text text-base_black font-semibold text-base">Email
                                             ID*</span>
                                     </div>
                                     <input type="text" placeholder="Enter your email id"
-                                        class="input input-bordered w-full text-p/40 h-full focus:outline-accent/50" />
+                                        class="input input-bordered w-full text-p/40 focus:outline-accent/50" />
                                 </div>
 
-                                <div>
+                                <!-- open success modal from next button -->
+                                <div class="mb-4">
                                     <button
-                                        class="btn text-white text-xl font-extrabold bg-accent w-full h-full hover:bg-accent/50 py-4 mt-6 rounded-2xl"
-                                        id="next-btn">Next</button>
+                                        class="btn text-white text-xl font-extrabold bg-accent w-full hover:bg-accent/50 mt-3 rounded-2xl"
+                                        id="next-btn" onclick="my_modal_1.showModal()">Next</button>
+
+                                    <dialog id="my_modal_1" class="modal">
+                                        <div
+                                            class="modal-box text-modal_text roboto text-xl gap-9 flex flex-col justify-center items-center px-20 py-14 max-w-3xl">
+                                            <div><img src="./images/success.png" alt="Success"></div>
+                                            <div>
+                                                <h1 class="text-success text-2xl font-bold">Success</h1>
+                                            </div>
+                                            <div class="flex flex-col justify-between items-center">
+                                                <h3 class="font-medium">Thank you for Booking Our Bus Seats.<br>We are
+                                                    working hard to find the best service and deals for you.</h3>
+                                                <p class="font-light leading-[170%] mt-2">Shortly you will find a
+                                                    confirmation in your email.</p>
+                                                <div class="modal-action mt-5">
+                                                    <form method="dialog">
+                                                        <button
+                                                            class="btn text-white font-semibold py-4 px-24 bg-success rounded-[32px] hover:bg-success/50">Continue</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dialog>
                                 </div>
 
                                 <div class="flex gap-11 justify-center">
                                     <a href="" class="underline text-p/60 text-base">Terms and Conditions</a>
                                     <a href="" class="underline text-p/60 text-base">Cancellation Policy</a>
                                 </div>
-                                </label>
                             </div>
                         </div>
                     </div>
@@ -507,13 +539,14 @@
     </main>
 
     <footer
-        class="footer py-28 px-32 bg-black text-white flex flex-col divide-y-2 divide-bg_white/30 divide-dashed text-left">
-        <div class="flex justify-between w-full raleway mb-12">
+        class="footer py-28 bg-black text-white flex flex-col divide-y-2 divide-bg_white/30 divide-dashed text-left">
+        <div class="flex justify-between raleway mb-12 w-4/5 mx-auto">
             <aside>
                 <p class="text-4xl font-extrabold mb-4">P-Ticket</p>
                 <p class="text-white/80 inter text-lg leading-7 w-4/6">P-Ticket is a digital platform to make your daily
                     commuting better.</p>
             </aside>
+
             <nav>
                 <h6 class="text-xl font-semibold mb-4 text-right">Download our app</h6>
                 <a href=""><svg width="189" height="56" viewBox="0 0 189 56" fill="none"
@@ -546,7 +579,7 @@
             </nav>
         </div>
 
-        <div class="flex justify-between w-full inter text-base mt-8 pt-8">
+        <div class="flex justify-between inter text-base mt-8 pt-8 w-4/5 mx-auto">
             <aside>
                 <p class="text-white/70">@all rights reserved, P-Ticket services limited 2024</p>
             </aside>
@@ -558,6 +591,7 @@
         </div>
     </footer>
 
+    <!-- js file -->
     <script src="./scripts/smart-commute-pass.js"></script>
 </body>
 

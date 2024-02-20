@@ -2,7 +2,6 @@ const seatPrice = 550;
 const capacity = 40;
 const maxSeat = 4;
 const ticketClass = "Economy";
-
 const validCouponCodes = ["New15", "Couple 20"];
 
 const seatBtn = document.getElementsByClassName("seat");
@@ -12,6 +11,7 @@ const phoneNumberInput = document.getElementById("phone");
 const nextBtn = document.getElementById("next-btn");
 const couponCodeInput = document.getElementById("coupon-code");
 
+// disabled initially
 applyBtn.disabled = true;
 nextBtn.disabled = true;
 
