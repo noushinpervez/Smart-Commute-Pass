@@ -59,7 +59,7 @@
 
 <body class="text-center">
     <!-- navbar section -->
-    <nav class="raleway mt-14 mx-auto w-4/5">
+    <nav class="raleway mt-14 mx-auto lg:w-4/5 w-11/12">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -72,25 +72,25 @@
                     </div>
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a class="text-p/70 text-lg font-medium">Home</a></li>
-                        <li><a class="text-p/70 text-lg font-medium">About</a></li>
-                        <li><a class="text-p/70 text-lg font-medium">Destination</a></li>
-                        <li><a class="text-p/70 text-lg font-medium">Search</a></li>
+                        <li><a class="text-p/70 text-lg font-medium hover:bg-accent/50">Home</a></li>
+                        <li><a class="text-p/70 text-lg font-medium hover:bg-accent/50">About</a></li>
+                        <li><a class="text-p/70 text-lg font-medium hover:bg-accent/50">Destination</a></li>
+                        <li><a class="text-p/70 text-lg font-medium hover:bg-accent/50">Search</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-base_black text-4xl font-extrabold">P-Ticket</a>
+                <a class="btn btn-ghost text-base_black lg:text-4xl text-xl font-extrabold">P-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a class="text-p/70 text-lg font-medium">Home</a></li>
-                    <li><a class="text-p/70 text-lg font-medium">About</a></li>
-                    <li><a class="text-p/70 text-lg font-medium">Destination</a></li>
-                    <li><a class="text-p/70 text-lg font-medium">Search</a></li>
+                    <li><a class="text-p/70 text-lg font-medium hover:bg-accent/50">Home</a></li>
+                    <li><a class="text-p/70 text-lg font-medium hover:bg-accent/50">About</a></li>
+                    <li><a class="text-p/70 text-lg font-medium hover:bg-accent/50">Destination</a></li>
+                    <li><a class="text-p/70 text-lg font-medium hover:bg-accent/50">Search</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
                 <button
-                    class="btn px-8 py-4 h-full border bg-nav_btn/10 border-nav_btn/40 text-xl font-bold text-accent hover:text-white hover:bg-accent/50">Bus
+                    class="btn lg:px-8 px-5 py-4 h-full border bg-nav_btn/10 border-nav_btn/40 text-xl font-bold text-accent hover:text-white hover:bg-accent/50 rounded-xl">Bus
                     <img src="./images/bus-icon.png" alt="Bus">
                 </button>
             </div>
@@ -98,16 +98,16 @@
     </nav>
 
     <!-- banner section -->
-    <header class="mx-auto w-4/5 relative">
-        <div class="hero rounded-3xl relative mt-9 pt-20 pb-32" style="background-image: url(./images/banner.png);">
-            <div class="hero-content text-center">
-                <div class="max-w-[60%]">
-                    <h1 class="raleway text-white text-6xl font-extrabold leading-[136%]">End-to-End Travel with <span
+    <header class="mx-auto lg:w-4/5 w-11/12 relative">
+        <div class="hero rounded-3xl relative mt-9" style="background-image: url(./images/banner.png);">
+            <div class="hero-content text-center mt-20 mb-40">
+                <div class="max-w-[60%]";>
+                    <h1 class="raleway text-white lg:text-6xl text-3xl font-extrabold" style="line-height: 140%">End-to-End Travel with <span
                             class="text-accent">P Paribahan</span></h1>
-                    <p class="text-white inter text-lg leading-[170%] mt-5">Easily book your bus tickets, choose your
+                    <p class="text-white inter lg:text-lg text-sm mt-5" style="line-height: 170%">Easily book your bus tickets, choose your
                         preferred seats and enjoy a comfortable journey. Use exclusive coupons for extra savings!</p>
                     <button><a href="#target-section" id="buy-tickets"
-                            class="btn border-0 px-8 py-5 h-full bg-accent font-bold text-base_black text-xl raleway hover:text-white hover:bg-accent/90 mt-8">Buy
+                            class="btn border-0 lg:px-8 px-5 py-5 h-full bg-accent font-bold text-base_black lg:text-xl text-lg raleway hover:text-white hover:bg-accent/90 mt-8">Buy
                             Tickets</a>
                     </button>
                 </div>
@@ -116,7 +116,7 @@
 
         <!-- stat section -->
         <section
-            class="inter absolute -bottom-[15%] left-1/2 transform -translate-x-1/2 px-24 stats bg-opacity-0 text-left w-full">
+            class="inter absolute -bottom-[15%] left-1/2 transform -translate-x-1/2 px-24 stats bg-opacity-0 text-left w-full hidden lg:block">
 
             <!-- stat 1: registered users -->
             <div class="stat flex">
@@ -152,7 +152,7 @@
     <!-- main section -->
     <main>
         <!-- coupon section -->
-        <section class="mt-48 mx-auto w-4/5">
+        <section class="lg:mt-48 mt-16 mx-auto lg:w-4/5 w-11/12">
             <h3 class="text-base_black text-4xl font-bold raleway">Best offers for you</h3>
 
             <div class="flex flex-col w-full lg:flex-row gap-6 mt-12">
@@ -166,8 +166,8 @@
                         </div>
                         <img src="./images/cupon-devider.png" alt="Coupon Divider">
                         <div class="grid flex-grow raleway">
-                            <h3 class="text-base_black text-3xl font-bold leading-[180%]">NEW15</h3>
-                            <p class="text-p/40 text-xl font-medium leading-[180%]">Coupon Code</p>
+                            <h3 class="text-base_black text-3xl font-bold" style="line-height: 180%">NEW15</h3>
+                            <p class="text-p/40 text-xl font-medium" style="line-height: 180%">Coupon Code</p>
                         </div>
                     </div>
                 </div>
@@ -182,8 +182,8 @@
                         </div>
                         <img src="./images/cupon-devider.png" alt="Coupon Divider">
                         <div class="grid flex-grow raleway">
-                            <h3 class="text-base_black text-3xl font-bold leading-[180%]">Couple 20</h3>
-                            <p class="text-p/40 text-xl font-medium leading-[180%]">Coupon Code</p>
+                            <h3 class="text-base_black text-3xl font-bold" style="line-height: 180%">Couple 20</h3>
+                            <p class="text-p/40 text-xl font-medium" style="line-height: 180%">Coupon Code</p>
                         </div>
                     </div>
                 </div>
@@ -195,15 +195,16 @@
         </section>
 
         <!-- ticket booking section -->
-        <section class="mt-28 border-t-2 border-accent rounded-t-[88px] bg-bg_white pb-28" id="target-section">
+        <section class="lg:mt-28 mt-16 border-t-2 border-accent rounded-t-[88px] bg-bg_white pb-28" id="target-section">
             <h3 class="text-base_black text-4xl font-bold raleway mt-28">Smart Commute
                 Pass</h3>
-            <p class="text-p/60 inter text-lg leading-[170%] mt-6 w-[50%] mx-auto">Easily book your bus tickets, choose
+            <p class="text-p/60 inter text-lg mt-6 w-[50%] mx-auto" style="line-height: 170%">Easily book your bus tickets, choose
                 your preferred seats and enjoy a comfortable journey. Use exclusive coupons for extra savings!</p>
 
             <!-- ticket info card -->
-            <div class="flex rounded-3xl mt-12 bg-white items-center mx-auto w-4/5">
+            <div class="flex rounded-3xl mt-12 bg-white items-center mx-auto lg:w-4/5 w-11/12">
                 <div class="grid gap-6 flex-grow text-left inter mx-8 my-6" style="flex: 5;">
+                    
                     <!-- ticket info headline -->
                     <div class="flex justify-between">
                         <div class="flex gap-4">
@@ -211,12 +212,12 @@
                                 <img src="./images/bus-logo.png" alt="Bus logo">
                             </div>
                             <div>
-                                <h3 class="text-base_black text-3xl font-bold raleway">Greenline Paribahan</h3>
+                                <h3 class="text-base_black lg:text-3xl text-xl font-bold raleway">Greenline Paribahan</h3>
                                 <p class="text-p/60 text-lg">Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div>
                         <button
-                            class="btn p-4 h-full bg-nav_btn/15 text-lg font-medium text-accent hover:text-white hover:bg-accent/50">
+                            class="btn p-4 h-full bg-nav_btn/15 lg:text-lg text-base font-medium text-accent hover:text-white hover:bg-accent/50">
                             <img src="./images/seat-green.png" alt="Seat"><span id="seat-left">40</span> Seats left
                         </button>
                     </div>
@@ -239,19 +240,19 @@
                         </div>
 
                         <div class="flex flex-row gap-6 w-[90%] mx-auto pt-6 pb-8 inter">
-                            <button class="flex-1 btn bg-p/5 text-p/80 font-medium p-4 h-full text-base">Boarding Point
+                            <button class="flex-1 btn bg-p/5 text-p/80 font-medium p-4 h-full lg:text-base text-sm">Boarding Point
                                 -
                                 Laxmipur</button>
-                            <button class="flex-1 btn bg-p/5 text-p/80 font-medium p-4 h-full text-base">Dropping Point
+                            <button class="flex-1 btn bg-p/5 text-p/80 font-medium p-4 h-full lg:text-base text-sm">Dropping Point
                                 -
                                 Bogura</button>
-                            <button class="flex-1 btn bg-p/5 text-p/80 font-medium p-4 h-full text-base">Est. Time - 11
+                            <button class="flex-1 btn bg-p/5 text-p/80 font-medium p-4 h-full lg:text-base text-sm">Est. Time - 11
                                 Hour</button>
                         </div>
                     </div>
                 </div>
 
-                <img src="./images/info-devider.png" alt="Info Divider">
+                <img src="./images/info-devider.png" alt="Info Divider" class="hidden lg:block">
 
                 <div class="flex flex-col flex-grow raleway flex-1 items-center gap-6">
                     <div>
@@ -265,8 +266,8 @@
             </div>
 
             <!-- buy tickets -->
-            <div class="mt-6 raleway rounded-3xl bg-white mx-auto w-4/5">
-                <div class="flex flex-col gap-16 w-full lg:flex-row divide-x-2 divide-dashed divide-p/30 p-8">
+            <div class="mt-6 raleway rounded-3xl bg-white mx-auto lg:w-4/5 w-11/12">
+                <div class="flex flex-col gap-8 w-full lg:flex-row p-8">
                     <!-- seat selection -->
                     <div class="grid flex-1">
                         <div class="flex flex-col">
@@ -306,97 +307,97 @@
                             <!-- seat layout -->
                             <div class="flex gap-4 inter mt-6">
                                 <!-- seat rows -->
-                                <div class="flex flex-col gap-6">
+                                <div class="flex flex-col gap-6 flex-grow">
                                     <button
-                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 px-11 w-full h-auto">A</button>
+                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto">A</button>
                                     <button
-                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 px-11 w-full h-auto">B</button>
+                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto">B</button>
                                     <button
-                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 px-11 w-full h-auto">C</button>
+                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto">C</button>
                                     <button
-                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 px-11 w-full h-auto">D</button>
+                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto">D</button>
                                     <button
-                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 px-11 w-full h-auto">E</button>
+                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto">E</button>
                                     <button
-                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 px-11 w-full h-auto">F</button>
+                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto">F</button>
                                     <button
-                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 px-11 w-full h-auto">J</button>
+                                        class="btn btn-ghost text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto">J</button>
                                 </div>
 
-                                <div class="flex gap-16">
-                                    <div class="flex gap-8">
+                                <div class="flex gap-16 flex-grow">
+                                    <div class="flex gap-8 flex-grow">
                                         <!-- column 1 -->
-                                        <div class="flex flex-col gap-6">
+                                        <div class="flex flex-col gap-6 flex-grow">
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">A1</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:lg:px-11 w-full h-auto seat">A1</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">B1</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">B1</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">C1</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">C1</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">D1</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">D1</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">E1</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">E1</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">F1</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">F1</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">J1</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">J1</button>
                                         </div>
 
                                         <!-- column 2 -->
-                                        <div class="flex flex-col gap-6">
+                                        <div class="flex flex-col gap-6 flex-grow">
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">A2</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">A2</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">B2</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">B2</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">C2</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">C2</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">D2</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">D2</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">E2</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">E2</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">F2</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">F2</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">J2</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">J2</button>
                                         </div>
                                     </div>
 
-                                    <div class="flex gap-8">
+                                    <div class="flex gap-8 flex-grow">
                                         <!-- column 3 -->
-                                        <div class="flex flex-col gap-6">
+                                        <div class="flex flex-col gap-6 flex-grow">
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">A3</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">A3</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">B3</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">B3</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">C3</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">C3</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">D3</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">D3</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">E3</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">E3</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">F3</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">F3</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">J3</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">J3</button>
                                         </div>
 
                                         <!-- column 4 -->
-                                        <div class="flex flex-col gap-6">
+                                        <div class="flex flex-col gap-6 flex-grow">
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">A4</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">A4</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">B4</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">B4</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">C4</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">C4</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">D4</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">D4</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">E4</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">E4</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">F4</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">F4</button>
                                             <button
-                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 px-11 w-full h-auto seat">J4</button>
+                                                class="btn bg-bg_white text-p/50 font-medium text-lg py-4 lg:px-11 w-full h-auto seat">J4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -404,8 +405,10 @@
                         </div>
                     </div>
 
+                    <div class="border-2 border-dashed border-p/30"></div>
+
                     <!-- show info and input form -->
-                    <div class="grid flex-1 pl-8 inter">
+                    <div class="grid flex-1 inter">
                         <div class="flex flex-col items-start divide-y divide-dashed divide-p/20">
                             <div>
                                 <h3 class="text-base_black text-2xl font-semibold raleway mb-6">Select Your Seat</h3>
@@ -445,22 +448,21 @@
                                         </div>
 
                                         <!-- apply for coupon -->
-                                        <div class="flex relative mb-3">
+                                        <div class="relative">
                                             <input type="text" id="coupon-code" placeholder="Have any coupon?"
-                                                class="input input-bordered w-full text-p/40 min-h-full focus:outline-accent/50" />
-                                            <button
-                                                class="btn bg-accent text-white text-sm font-semibold px-5 py-3 absolute right-0 top-1/2 transform -translate-y-1/2 hover:bg-accent/50"
+                                                class="input input-bordered w-full text-p/40 focus:outline-accent/50" />
+                                            <button class="btn bg-accent text-white text-sm font-semibold px-5 absolute right-0 top-0 bottom-0 hover:bg-accent/50"
                                                 id="coupon-apply">Apply</button>
-                                        </div>
+                                        </div>                                                                           
 
                                         <!-- show error message if wrong coupon code is applied -->
-                                        <div id="coupon-code-error" class="text-left text-red-700 font-semibold text-base"></div>
+                                        <div id="coupon-code-error" class="text-left text-red-700 mb-3 font-semibold text-base"></div>
 
                                         <!-- show discount info if correct coupon code is applied -->
                                         <div id="discount-message" class="flex justify-between w-full -mt-6 mb-3 text-accent text-base font-medium"></div>
 
                                         <!-- show grand total price -->
-                                        <div class="text-base_black text-base font-medium flex justify-between">
+                                        <div class="text-base_black text-base font-medium flex justify-between mt-3">
                                             <div>
                                                 <p>Grand Total</p>
                                             </div>
@@ -518,7 +520,7 @@
                                             <div class="flex flex-col justify-between items-center">
                                                 <h3 class="font-medium">Thank you for Booking Our Bus Seats.<br>We are
                                                     working hard to find the best service and deals for you.</h3>
-                                                <p class="font-light leading-[170%] mt-2">Shortly you will find a
+                                                <p class="font-light mt-2" style="line-height: 170%">Shortly you will find a
                                                     confirmation in your email.</p>
                                                 <div class="modal-action mt-5">
                                                     <form method="dialog">
@@ -542,16 +544,16 @@
     </main>
 
     <footer
-        class="footer py-28 bg-black text-white flex flex-col divide-y-2 divide-bg_white/30 divide-dashed text-left">
-        <div class="flex justify-between raleway mb-12 w-4/5 mx-auto">
+        class="footer lg:py-28 py-7 bg-black text-white flex flex-col divide-y-2 divide-bg_white/30 divide-dashed text-left">
+        <div class="flex justify-between raleway lg:mb-12 lg:w-4/5 w-11/12 mx-auto">
             <aside>
-                <p class="text-4xl font-extrabold mb-4">P-Ticket</p>
-                <p class="text-white/80 inter text-lg leading-7 w-4/6">P-Ticket is a digital platform to make your daily
+                <p class="lg:text-4xl text-xl font-extrabold mb-4">P-Ticket</p>
+                <p class="text-white/80 inter lg:text-lg text-base leading-7 w-4/6">P-Ticket is a digital platform to make your daily
                     commuting better.</p>
             </aside>
 
             <nav>
-                <h6 class="text-xl font-semibold mb-4 text-right">Download our app</h6>
+                <h6 class="lg:text-xl text-base font-semibold mb-4 text-right">Download our app</h6>
                 <a href=""><svg width="189" height="56" viewBox="0 0 189 56" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -582,7 +584,7 @@
             </nav>
         </div>
 
-        <div class="flex justify-between inter text-base mt-8 pt-8 w-4/5 mx-auto">
+        <div class="flex justify-between inter lg:text-base text-sm mt-8 pt-8 lg:w-4/5 w-11/12 mx-auto">
             <aside>
                 <p class="text-white/70">@all rights reserved, P-Ticket services limited 2024</p>
             </aside>
