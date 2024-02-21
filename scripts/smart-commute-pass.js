@@ -19,8 +19,9 @@ applyBtn.disabled = true;
 nextBtn.disabled = true;
 
 // variables
-let selectedSeatsArray = [];
-let count = 0;
+let selectedSeatsArray = []; 
+let count = 0; // tracks selection of only 4 seats
+let couponApplied = false; // tracks if valid coupon code has been applied or not
 
 // event listeners
 phoneNumberInput.addEventListener("input", function () {
@@ -34,12 +35,34 @@ applyBtn.addEventListener("click", function () {
 for (const btn of seatBtn) {
     btn.addEventListener("click", function (e) {
         const seatNumber = e.target.innerText;
-        toggleSeatSelection(seatNumber);
-        updateSeatStyles();
-        updateTicketInfo();
-        enableNextButton();
-        count++;
+
+        // seat select or deselect if valid coupon code has not been applied
+        if (!couponApplied) {
+            toggleSeatSelection(seatNumber);
+            updateSeatStyles();
+            updateTicketInfo();
+            enableNextButton();
+            count++;
+        }
     });
+}
+
+// update the style of seat button based on selection
+function updateSeatStyles() {
+    for (const btn of seatBtn) {
+        const seatNumber = btn.innerText;
+
+        if (selectedSeatsArray.includes(seatNumber)) {
+            btn.style.backgroundColor = "#1DD100";
+            btn.style.opacity = 0.5;
+            btn.style.color = "#FFFFFF";
+        }
+        else {
+            btn.style.backgroundColor = "";
+            btn.style.opacity = "";
+            btn.style.color = "";
+        }
+    }
 }
 
 // handle the selection and deselection of seats conditions
@@ -51,15 +74,15 @@ function toggleSeatSelection(seatNumber) {
             selectedSeatsArray.push(seatNumber);
             const seatDiv = createSeatDiv(seatNumber);
             showInfoContainer.appendChild(seatDiv);
-        } else {
+        }
+        else {
             selectedSeatsArray.splice(seatIndex, 1);
             removeTicketInfo(seatNumber);
         }
     }
     // show error message if trying to select more seats than allowed
     else if (!selectedSeatsArray.includes(seatNumber) && count >= maxSeat) {
-        const messageElement = document.getElementById("seat-selection-message");
-        messageElement.innerText = "You can only select up to 4 seats.";
+        setInnerText("seat-selection-message", "You can only select up to 4 seats.");
     }
 }
 
@@ -96,34 +119,24 @@ function createSeatDiv(seatNumber) {
     return seatDiv;
 }
 
-// show ticket info
-function showTicketInfo(seatNumber) {
-    const seatDiv = createSeatDiv(seatNumber);
-    showInfoContainer.appendChild(seatDiv);
-}
-
 function createDiv(value) {
     const div = document.createElement("div");
     div.innerText = value;
     return div;
 }
 
+// show ticket info
+function showTicketInfo(seatNumber) {
+    const seatDiv = createSeatDiv(seatNumber);
+    showInfoContainer.appendChild(seatDiv);
+}
+
 // remove ticket information for the deselected seat
 function removeTicketInfo(seatNumber) {
     const seatInfoToRemove = document.getElementById(`seat-info-${seatNumber}`);
+
     if (seatInfoToRemove) {
         showInfoContainer.removeChild(seatInfoToRemove);
-    }
-}
-
-// update the style of seat button based on selection
-function updateSeatStyles() {
-    for (const btn of seatBtn) {
-        const seatNumber = btn.innerText;
-        const isSelected = selectedSeatsArray.includes(seatNumber);
-        btn.style.backgroundColor = isSelected ? "#1DD100" : "";
-        btn.style.opacity = isSelected ? 0.5 : "";
-        btn.style.color = isSelected ? "#FFFFFF" : "";
     }
 }
 
@@ -153,18 +166,18 @@ function applyCoupon() {
         const discountPercentage = getDiscountPercentage(couponCode);
         const discountedPrice = calculateDiscount(selectedSeatsArray.length * seatPrice, discountPercentage);
         const savings = selectedSeatsArray.length * seatPrice - discountedPrice;
+
         setInnerText("grand-total-price", discountedPrice);
 
         // hide coupon code input and apply button after successful coupon code entry
         couponCodeInput.style.display = "none";
         applyBtn.style.display = "none";
 
-        const discountMessage = document.getElementById("discount-message");
-        discountMessage.innerHTML = "";
-
         // show discount information
+        const discountMessage = document.getElementById("discount-message");
+
         const div1 = createDiv(`${discountPercentage}% Discount`);
-        const div2 = createDiv(`-BDT ${savings}`);
+        const div2 = createDiv(`- BDT ${savings}`);
 
         discountMessage.appendChild(div1);
         discountMessage.appendChild(div2);
@@ -172,13 +185,15 @@ function applyCoupon() {
         // remove any existing error message
         const errorToRemove = document.getElementById("error");
         if (errorToRemove) {
-            couponCodeError.innerText = "";
-            showInfoContainer.removeChild(errorToRemove);
+            setInnerText("error", "");
         }
-    } else {
+
+        couponApplied = true;
+    }
+    else {
         // show error message for invalid coupon code
         couponCodeError.id = "error";
-        couponCodeError.innerText = "Invalid coupon code. Please try again.";
+        setInnerText("error", "Invalid coupon code. Please try again.");
     }
 }
 
@@ -186,7 +201,8 @@ function applyCoupon() {
 function getDiscountPercentage(couponCode) {
     if (couponCode === "New15") {
         return 15;
-    } else if (couponCode === "Couple 20") {
+    }
+    else if (couponCode === "Couple 20") {
         return 20;
     }
 }
