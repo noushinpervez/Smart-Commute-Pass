@@ -11,26 +11,15 @@ const applyBtn = document.getElementById("coupon-apply");
 const showInfoContainer = document.getElementById("show-info");
 const phoneNumberInput = document.getElementById("phone");
 const nextBtn = document.getElementById("next-btn");
-const couponCodeInput = document.getElementById("coupon-code");
-const couponCodeError = document.getElementById("coupon-code-error");
 
 // apply and next buttons disabled initially
 applyBtn.disabled = true;
 nextBtn.disabled = true;
 
 // variables
-let selectedSeatsArray = []; 
+let selectedSeatsArray = [];
 let count = 0; // tracks selection of only 4 seats
 let couponApplied = false; // tracks if valid coupon code has been applied or not
-
-// event listeners
-phoneNumberInput.addEventListener("input", function () {
-    enableNextButton();
-});
-
-applyBtn.addEventListener("click", function () {
-    applyCoupon();
-});
 
 for (const btn of seatBtn) {
     btn.addEventListener("click", function (e) {
@@ -160,6 +149,9 @@ function enableNextButton() {
 
 // apply coupon code
 function applyCoupon() {
+    const couponCodeInput = document.getElementById("coupon-code");
+    const couponCodeError = document.getElementById("coupon-code-error");
+
     const couponCode = couponCodeInput.value.trim();
 
     if (validCouponCodes.includes(couponCode)) {

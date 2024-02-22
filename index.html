@@ -59,7 +59,7 @@
 
 <body class="text-center">
     <!-- navbar section -->
-    <nav class="raleway lg:mt-14 mx-auto lg:w-4/5 w-11/12">
+    <nav class="raleway lg:mt-14 mt-4 mx-auto lg:w-4/5 w-11/12">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -204,7 +204,7 @@
             id="target-section">
             <h3 class="text-base_black lg:text-4xl text-2xl font-bold raleway lg:mt-28 mt-14">Smart Commute
                 Pass</h3>
-            <p class="text-p/60 inter lg:text-lg text-sm lg:mt-6 mt-2 lg:w-[50%] mx-auto" style="line-height: 170%">
+            <p class="text-p/60 inter lg:text-lg text-sm lg:mt-6 mt-2 lg:w-[50%] w-4/5 mx-auto" style="line-height: 170%">
                 Easily book your bus tickets, choose
                 your preferred seats and enjoy a comfortable journey. Use exclusive coupons for extra savings!</p>
 
@@ -288,7 +288,7 @@
             <div class="mt-6 raleway rounded-3xl bg-white mx-auto lg:w-4/5 w-11/12">
                 <div class="flex flex-col gap-8 w-full lg:flex-row lg:p-8 p-3">
                     <!-- seat selection -->
-                    <div class="grid flex-1">
+                    <div class="grid" style="flex: 1.6;">
                         <div class="flex flex-col">
                             <div class="flex flex-col items-start divide-y divide-dashed divide-p/20">
 
@@ -480,7 +480,7 @@
                                                 class="input input-bordered w-full text-p/40 focus:outline-accent/50" required />
                                             <button
                                                 class="btn bg-accent text-white text-sm font-semibold lg:px-5 absolute right-0 top-0 bottom-0 hover:bg-accent/50"
-                                                id="coupon-apply">Apply</button>
+                                                id="coupon-apply" onclick="applyCoupon()">Apply</button>
                                         </div>
 
                                         <!-- show error message if wrong coupon code is applied -->
@@ -490,7 +490,7 @@
 
                                         <!-- show discount info if correct coupon code is applied -->
                                         <div id="discount-message"
-                                            class="flex justify-between w-full lg:-mt-6 -mt-4 lg:mb-3 text-accent lg:text-base text-sm font-medium">
+                                            class="flex justify-between w-full lg:-mt-5 -mt-4 lg:mb-3 text-accent lg:text-base text-sm font-medium">
                                         </div>
 
                                         <!-- show grand total price -->
@@ -526,7 +526,7 @@
                                             Number*</span>
                                     </div>
                                     <input type="text" id="phone" placeholder="Enter your phone number"
-                                        class="input input-bordered w-full text-p/40 focus:outline-accent/50" required />
+                                        class="input input-bordered w-full text-p/40 focus:outline-accent/50" oninput="enableNextButton()" required />
                                 </div>
 
                                 <div>
